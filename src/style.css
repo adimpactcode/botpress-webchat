@@ -1288,40 +1288,23 @@ video {
 .\#chew64 {
   animation-delay: 0.1s;
 }
-/* Ergänzt am Ende deiner existierenden CSS-Datei */
-/* Grundlegendes Styling zur Sicherstellung der Skalierbarkeit der Bilder */
-.bpw-chat-bubble img {
-  max-width: 100%; /* Begrenzt die Bildbreite auf die Breite der Chatblase */
-  height: auto; /* Erhält das Seitenverhältnis des Bildes */
+.chat-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten für mehr Sichtbarkeit */
 }
-
-/* Verbessert das Scrolling, indem der Chat-Container nach jeder Nachricht nach unten scrollt */
-.bpw-chat-container {
-  overflow-y: auto; /* Erlaubt Scrollen, wenn der Inhalt den Container übersteigt */
-  max-height: 70vh; /* Begrenzt die Höhe des Containers auf 70% der Ansichtshöhe */
-  scroll-behavior: smooth; /* Sorgt für weiches Scrollen */
-}
-
-/* Stellt sicher, dass die Eingabezeile immer sichtbar ist */
-.bpw-composer {
-  position: sticky; /* Fixiert die Eingabezeile am unteren Rand innerhalb des Viewports */
-  bottom: 0;
-  width: 100%; /* Stellt sicher, dass die Eingabezeile die volle Breite einnimmt */
-  z-index: 1000; /* Stellt sicher, dass die Eingabezeile über den anderen Elementen liegt */
-  background: #ffffff; /* Setzt einen Hintergrund, um Überlappungsinhalte zu verdecken */
-}
-
-/* Sorgt für angemessenen Abstand zwischen den Chat-Nachrichten */
-.bpw-chat-bubble {
-  margin-bottom: 10px; /* Fügt Abstand zwischen den Blasen hinzu */
 
 /* Stellt sicher, dass der Chat-Container flexibel skaliert und scrollt */
 .bpw-chat-container {
   overflow-y: auto;
-  max-height: 70vh;
+  max-height: calc(70vh - 50px); /* Höhe minus Header */
   scroll-behavior: smooth;
   display: flex;
-  flex-direction: column-reverse; /* Zeigt die neuesten Nachrichten unten an */
+  flex-direction: column; /* Keine Umkehrung, um den Header oben zu halten */
+  padding-top: 10px; /* Platz für den Header */
 }
 
 /* Stellt sicher, dass die Eingabezeile immer sichtbar ist */
@@ -1338,6 +1321,7 @@ video {
 .bpw-chat-bubble {
   margin-bottom: 10px;
   word-wrap: break-word; /* Bricht lange Wörter in der Nachricht um */
+}
 }
 
   }
