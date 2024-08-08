@@ -1288,3 +1288,19 @@ video {
 .\#chew64 {
   animation-delay: 0.1s;
 }
+/* Ergänzt am Ende deiner existierenden CSS-Datei */
+.bpw-layout {
+  max-width: 600px;      /* Maximale Breite des Chatfensters */
+  width: 80%;            /* Breite relativ zum Elternelement */
+  height: 70vh;          /* Höhe des Chatfensters basierend auf der Ansichtshöhe */
+  margin: 0 auto;        /* Zentriert den Chat auf der Seite */
+}
+
+@media (max-width: 768px) {
+  .bpw-layout {
+    width: 100%;         /* Auf kleinen Bildschirmen die volle Breite nutzen */
+    height: 100vh;       /* Auf kleinen Bildschirmen die volle Bildschirmhöhe nutzen */
+    border-radius: 0;    /* Entfernt abgerundete Ecken auf kleinen Geräten */
+  }
+}
+
