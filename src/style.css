@@ -1314,6 +1314,32 @@ video {
 /* Sorgt für angemessenen Abstand zwischen den Chat-Nachrichten */
 .bpw-chat-bubble {
   margin-bottom: 10px; /* Fügt Abstand zwischen den Blasen hinzu */
+
+/* Stellt sicher, dass der Chat-Container flexibel skaliert und scrollt */
+.bpw-chat-container {
+  overflow-y: auto;
+  max-height: 70vh;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column-reverse; /* Zeigt die neuesten Nachrichten unten an */
+}
+
+/* Stellt sicher, dass die Eingabezeile immer sichtbar ist */
+.bpw-composer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten für mehr Sichtbarkeit */
+}
+
+/* Sorgt für angemessenen Abstand zwischen den Chat-Nachrichten */
+.bpw-chat-bubble {
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Bricht lange Wörter in der Nachricht um */
+}
+
   }
 }
 
