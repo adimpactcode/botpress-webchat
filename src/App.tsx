@@ -3,7 +3,7 @@ import { Webchat, WebchatProvider, useClient } from '@botpress/webchat';
 import './style.css';
 import { theme } from './theme';
 
-const clientId = '07657133-e358-45ea-b49e-f1eed1f6c698';
+const clientId = 'bfaf7c32-f481-4cf7-99ab-0ffe76b6e322';
 
 export default function App() {
   const client = useClient({ clientId });
